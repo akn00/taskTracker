@@ -1,13 +1,119 @@
+/* styles.css */
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .app {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+    border: solid black 1px;
+    background-color: #f5caeb;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .task-form input,
+  .task-form textarea,
+  .task-list .task-item {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .task-list .task-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #ebd7d7;
+    padding: 15px;
+    border: 1px solid #c4c1c1;
+    border-radius: 5px;
+    max-width: 600px;
+  }
+  
+  .task-list .task-item.completed {
+    background-color: #f5b1cd;
+    border: none;
+  }
+  
+  .task-list .task-item h3 {
+    margin: 0;
+  }
+  
+  .task-list .task-item p {
+    margin: 5px 0;
+  }
+  
+  .task-list .task-item button {
+    padding: 5px 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .task-list .task-item.completed button {
+    background-color: #ffcccc;
+  }
+  
+  .task-list .task-item button:first-child {
+    margin-right: 5px;
+  }
+  
+  .task-list .task-item button:last-child {
+    background-color: #ffcccc;
+  }
+  
+  .task-list .task-item.completed button:last-child {
+    background-color: #ff9999;
+  }
+  
+  .task-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .app {
+      padding: 10px;
+    }
+  }
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px;
+}
+.form textarea{
+    max-width: 400px;
+    max-height: 200px;
+}
+.task-filter{
+    display: flex;
+    gap: 30px;
+    /* margin: auto; */
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.task-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
